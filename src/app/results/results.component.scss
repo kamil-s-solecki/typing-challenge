@@ -1,0 +1,38 @@
+@import '../../styles/color-palette.scss';
+
+$dist: 0.2em;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60%;
+
+  section {
+    color: $primary-text-color;
+    text-align: center;
+    
+    h1 {
+      font-family: 'Major Mono Display', monospace;
+      font-size: 4em;
+      font-weight: 400;
+      margin-bottom: $dist;
+      padding: 0;
+    }
+
+    span {
+      border-bottom: 3px solid $divider-color;
+      display: inline-block;
+      margin: 0; padding: 0;
+      width: 4em;
+    }
+
+    p {
+      font-family: 'Roboto Slab', serif;
+      margin: 0; padding: 0;
+      margin-top: 1em - $dist;
+      font-size: 1.4em;
+      line-height: 1.5;
+    }
+  }
+}
