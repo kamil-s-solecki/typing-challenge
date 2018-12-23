@@ -6,10 +6,11 @@ section {
   justify-content: center;
   p {
     padding: 15px;
+    font-size: 1.4em;
     font-family: 'Roboto Slab', serif;
     border-left: 5px solid $divider-color;
     color: $primary-text-color;
-    max-width: 70%;
+    width: 100%;
   }
 }
 

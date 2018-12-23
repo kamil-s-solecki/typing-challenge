@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import '../../styles/color-palette.scss';
+
+section {
+  textarea {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1em;
+    border: 2px solid $divider-color;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+  }
+}
