@@ -2,6 +2,8 @@ import { Injectable, OnInit } from '@angular/core';
 import { Text, asString } from 'src/app/__models/text';
 import { texts } from 'src/app/__data/texts';
 
+const deepCopy = obj => JSON.parse(JSON.stringify(obj));
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +16,8 @@ export class TextService {
 
   private loadText() {
     const randomIndex = Math.floor(Math.random() * Math.floor(texts.length));
-    this.current = texts[randomIndex];
+    const randomText = texts[randomIndex];
+    this.current = deepCopy(randomText);
   }
 
   refresh() {
