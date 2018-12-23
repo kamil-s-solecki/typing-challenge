@@ -7,5 +7,6 @@
       in {{ result.miliseconds / 1000 | number: '1.0-1' }} seconds <br>
       which makes {{ result.typedCharacters / (result.miliseconds / 1000) | number: '1.0-0' }} chars per second
     </p>
+    <a [routerLink]="['/']">try again</a>
   </section>
 </div>

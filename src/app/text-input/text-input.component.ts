@@ -9,13 +9,14 @@ import { Challenge } from '../__services/challenge/challenge';
 })
 export class TextInputComponent implements OnInit {
   typedText: string;
-  private challengeStarted = false;
+  private challengeStarted;
 
   constructor(private textService: TextService,
               private challenge: Challenge) { 
   }
 
   ngOnInit() {
+    this.challengeStarted = false;
   }
 
   onChange() {
