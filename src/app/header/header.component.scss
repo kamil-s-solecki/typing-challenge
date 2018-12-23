@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+@import "../../styles/color-palette.scss";
+
+header {
+  margin: 0;
+  font-family: 'Major Mono Display', monospace;
+  color: $primary-color-text;
+  background-color: $primary-color;
+
+  * {
+    margin: 0;
+  }
+}
+
+h1 {
+  padding: 15px;
+  cursor: default;
+}

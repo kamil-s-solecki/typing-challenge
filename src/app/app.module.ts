@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TextDisplayComponent } from './text-display/text-display.component';
 import { TextInputComponent } from './text-input/text-input.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextDisplayComponent,
-    TextInputComponent
+    TextInputComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
