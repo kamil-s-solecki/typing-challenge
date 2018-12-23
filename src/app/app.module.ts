@@ -8,6 +8,7 @@ import { TextDisplayComponent } from './text-display/text-display.component';
 import { TextInputComponent } from './text-input/text-input.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MainComponent } from './main/main.component';
     TextDisplayComponent,
     TextInputComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
