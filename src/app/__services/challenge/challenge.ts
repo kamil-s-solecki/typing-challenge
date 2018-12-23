@@ -11,10 +11,8 @@ export class Challenge {
   constructor() { }
 
   start(charactersToType: number) {
-    console.log('START!')
     this.charactersToType = charactersToType;
     this.startTime = window.performance.now();
-    console.log(this.startTime);
   }
 
   finish() {
