@@ -1,3 +1,7 @@
 <p>
-  text-display works!
+  <span *ngFor="let letter of text.letters"
+    [ngClass]="{
+      valid: letter.isReached && !letter.isMistyped,
+      wrong: letter.isReached && letter.isMistyped
+    }">{{ letter.value }}</span>
 </p>
