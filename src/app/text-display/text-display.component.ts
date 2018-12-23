@@ -13,7 +13,7 @@ export class TextDisplayComponent implements OnInit {
   constructor(private textService: TextService) { }
 
   ngOnInit() {
-    this.text = this.textService.current();
+    this.text = this.textService.current;
   }
 
 }
