@@ -19,11 +19,19 @@ export class TextInputComponent implements OnInit {
   }
 
   onChange() {
+    this.startChallengeIfNotStarted();
+    this.textService.typed(this.typedText);
+    this.finishChallengeIfTypedTextMatches();
+  }
+
+  private startChallengeIfNotStarted() {
     if (!this.challengeStarted) {
       this.challengeStarted = true;
       this.challenge.start(this.textService.current.letters.length);
     }
-    this.textService.typed(this.typedText);
+  }
+
+  private finishChallengeIfTypedTextMatches() {
     if (this.textService.matches(this.typedText)) {
       this.challenge.finish();
     }
