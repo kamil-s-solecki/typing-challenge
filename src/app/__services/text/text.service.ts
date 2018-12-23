@@ -17,12 +17,19 @@ export class TextService {
   }
 
   typed(typedText: string) {
-    const textArr = typedText.split('');
+    this.checkTypedLetters(typedText.split(''));
+    this.unreachRemainingText(typedText);
+  }
+
+  private checkTypedLetters(textArr: string[]) {
     for (let i = 0; i < textArr.length; i++) {
       const originalLetter = this.current.letters[i];
       originalLetter.isReached = true;
       originalLetter.isMistyped = originalLetter.value != textArr[i];
     }
+  }
+
+  private unreachRemainingText(typedText: string) {
     this.current.letters.slice(typedText.length).forEach(letter => letter.isReached = false);
   }
 }
