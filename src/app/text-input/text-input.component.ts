@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TextService } from '../__services/text/text.service';
 import { Challenge } from '../__services/challenge/challenge';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-text-input',
@@ -12,7 +13,8 @@ export class TextInputComponent implements OnInit {
   private challengeStarted;
 
   constructor(private textService: TextService,
-              private challenge: Challenge) { 
+              private challenge: Challenge,
+              private router: Router) { 
   }
 
   ngOnInit() {
@@ -34,7 +36,8 @@ export class TextInputComponent implements OnInit {
 
   private finishChallengeIfTypedTextMatches() {
     if (this.textService.matches(this.typedText)) {
-      this.challenge.finish();
+      const result = this.challenge.finish();
+      this.router.navigate(['/results'], { queryParams: result });
     }
   }
 }

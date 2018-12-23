@@ -13,6 +13,7 @@ export class TextDisplayComponent implements OnInit {
   constructor(private textService: TextService) { }
 
   ngOnInit() {
+    this.textService.refresh();
     this.text = this.textService.current;
   }
 

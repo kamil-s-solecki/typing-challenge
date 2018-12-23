@@ -15,12 +15,12 @@ export class Challenge {
     this.startTime = window.performance.now();
   }
 
-  finish() {
+  finish(): ChallengeResult {
     const finishTime = window.performance.now();
     const result: ChallengeResult = {
       miliseconds: finishTime - this.startTime,
       typedCharacters: this.charactersToType,
     }
-    window.alert(`finished in ${result.miliseconds} miliseconds, typed ${result.typedCharacters} chars`);
+    return result;
   }
 }
