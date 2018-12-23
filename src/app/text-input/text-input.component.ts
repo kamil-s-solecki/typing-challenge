@@ -20,6 +20,7 @@ export class TextInputComponent implements OnInit {
 
   onChange() {
     if (!this.challengeStarted) {
+      this.challengeStarted = true;
       this.challenge.start();
     }
     this.textService.typed(this.typedText);
