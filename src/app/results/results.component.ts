@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChallengeResult } from '../__models/challengeResult';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-results',
@@ -11,9 +12,11 @@ export class ResultsComponent implements OnInit {
     miliseconds: 3000,
     typedCharacters: 250,
   }
-  constructor() { }
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.result = this.route.snapshot.queryParams as ChallengeResult; 
   }
 
 }

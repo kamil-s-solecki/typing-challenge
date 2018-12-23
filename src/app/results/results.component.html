@@ -4,7 +4,7 @@
     <span></span>
     <p>
       You've typed {{ result.typedCharacters }} characters <br>
-      in {{ result.miliseconds / 1000 }} seconds <br>
+      in {{ result.miliseconds / 1000 | number: '1.0-1' }} seconds <br>
       which makes {{ result.typedCharacters / (result.miliseconds / 1000) | number: '1.0-0' }} chars per second
     </p>
   </section>
