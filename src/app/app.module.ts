@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TextDisplayComponent } from './text-display/text-display.component';
 import { TextInputComponent } from './text-input/text-input.component';
 import { HeaderComponent } from './header/header.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextDisplayComponent,
     TextInputComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
