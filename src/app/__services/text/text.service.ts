@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Text } from 'src/app/__models/text';
+import { Text, asString } from 'src/app/__models/text';
 
 const sampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at facilisis eros. Aenean imperdiet dictum luctus. Maecenas metus velit, feugiat nec dui quis, ullamcorper aliquet ipsum.';
 const toLetter = char => { return { value: char, isMistyped: false, isReached: false }};
@@ -19,6 +19,10 @@ export class TextService {
   typed(typedText: string) {
     this.checkTypedLetters(typedText.split(''));
     this.unreachRemainingText(typedText);
+  }
+
+  matches(typedText: string): boolean {
+    return typedText === asString(this.current);
   }
 
   private checkTypedLetters(textArr: string[]) {
