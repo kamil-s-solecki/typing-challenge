@@ -2,6 +2,7 @@ import { Letter } from "./letter";
 
 export interface Text {
   letters: Letter[],
+  description: string,
 }
 
 export function asString(text: Text): string {
@@ -10,8 +11,9 @@ export function asString(text: Text): string {
 
 const toLetter = char => { return { value: char, isMistyped: false, isReached: false }};
 
-export function fromString(str: string): Text {
+export function fromString(value: string, description: string): Text {
   return {
-    letters: str.split('').map(toLetter),
+    letters: value.split('').map(toLetter),
+    description
   }
 }
