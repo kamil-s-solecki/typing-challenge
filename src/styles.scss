@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/'
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+@import './styles/color-palette.scss';
+
+body, html {
+  margin: 0;
+  height: 100%;
+}
